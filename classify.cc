@@ -5,9 +5,9 @@ int main(int argc, char* argv[])
 {
   UFILE* input = u_finit(stdin, NULL, NULL);
   UFILE* output = u_finit(stdout, NULL, NULL);
-  UChar c;
+  UChar32 c;
   while (true) {
-	c = u_fgetc(input);
+	c = u_fgetcx(input);
 	if (c == U_EOF) {
 	  break;
 	}
